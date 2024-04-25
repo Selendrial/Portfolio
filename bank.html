@@ -75,6 +75,35 @@
             This application include secure passwords practices by implementing sha-256 hashing and salting values that are saved to the database
             rather than raw password data. 
           </p>
+          <p>
+            In this MERN (MongoDB, Express.js, React.js, Node.js) application, sessions are used to manage user authentication
+            and maintain user state across multiple requests.
+            <ul>
+              <li>
+                Setting Up Sessions:<br/>
+                Sessions are managed in the backend using express-session. Session are created and stored on the MongoDB database.
+              </li>
+              <li>
+                User Authentication:<br>
+                When a user logs in, a session is created and associated with that user using a cookie in the user's browser. 
+                This cookie is sent with each subsequent request to identify the user's session.
+              </li>
+              <li>
+                Session Management:<br/>
+                Express handles session creation, retrieval, and destruction. Sessions are being used to store user-specific data like ID, username, 
+                and logged in status.
+              </li>
+              <li>
+                Authorization:<br/>
+                Sessions are also being used as part of access control, to prevent users from accessing secured data pages without proper authentication.
+              </li>
+              <li>
+                Session Expiry and Cleanup:<br/>
+                The Sessions have expiration times to automatically log out users after a period of inactivity, but when the user logs out the session is 
+                destroyed.
+              </li>
+            </ul>
+          </p>
 
 
           <p>          
