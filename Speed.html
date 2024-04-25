@@ -87,7 +87,7 @@
               <li>
                 Connections:<br>
                 When clients (players in the card game) connect to the server, Socket.io establishes WebSocket connections. Each client is then assigned a unique socket
-                 identifier (socket ID) upon connection. This is ID is stored within the game state and used throughout the program to identify the player and thier actions.
+                 identifier (socket ID) upon connection. This is ID is stored within the game state and used throughout the program to identify the player and their actions.
                  As the game progresses, clients can send and receive real-time messages through web sockets.
                  The server receives WebSocket events for specific actions from clients and then after completing the required actions and verification
                  broadcasts the resulting gamestate to all connected players.
@@ -95,8 +95,8 @@
               </li>
               <li>
                 Implementing Draggable Item:<br/>
-                The Drag and Dropp library uses event handlers (onDragStart, onDrag, onDragEnd) to handle the drag events for items.
-                When a card is slected from the players hand it infromation is captured and sent to the server using the socket communication.
+                The Drag and Drop library uses event handlers (onDragStart, onDrag, onDragEnd) to handle the drag events for items.
+                When a card is selected from the players hand it information is captured and sent to the server using the socket communication.
                 if the play is valid the server will process the play, update the hand, and draw replacement cards. The updated game state is then 
                 broadcast to the players.
               </li>
