@@ -67,17 +67,42 @@
             </div>
           </div>
           <p>
-            THis program uses Mongo Express React Node (MERN) stack and implemented the display of imagaes using useEffects to 
+            THis program uses Mongo Express React Node (MERN) stack and implemented the display of images using useEffects to 
             transition based off the results if user guesses.  The words are dynamically generated within the database. once the user guesses the data base us queried 
-            to see if the letter is withing the target word. If the leter is within the target word, the leter is displayed and the hangman 
+            to see if the letter is withing the target word. If the letter is within the target word, the letter is displayed and the hangman 
             is not updated. The number of guesses taken and the word are stored to be displayed after the game is completed. 
             
             The challenge with this game was to implement the use of a graphical hangman, as well as solving the implementation of a 
             library to dynamically generate words to play against. The  useEffect and useStates were used to address various changing display elements.
             
-          </p>
-
-          <p>          
+            <p>
+              The Hangman Game focused on using images for the display of the hangman while storing all game logic and verifications on the MongoDB.
+              <ul>
+                <li>
+                  MongoDB:<br/>
+                  For this application Node.js and Express were configured to handle HTTP requests and responses to interact with the server using routes. 
+                  The MongoDB was set up using a JSON game structure to store the game state and information.
+                  Additionally Sessions were used with this game in order to ensure the game is being played by the same player.
+                </li>
+                <li>
+                  Communication:<br>
+                  Routes use HTTP methods (GET, POST) that are called from the client side to access and perform different actions on the server.
+                  In this application route are handled as asynchronous functions that process incoming requests, perform game logic, and generate responses.
+                  In order to achieve the desired out comes the routes include parameters that are dynamic values passed in from the client side in order to 
+                  execute the game logic.
+                </li>
+                <li>
+                  Game:<br>
+                  For this application, the game logic resides on the server side including the target word to be guessed. The player enters their name then the length
+                  of the word they want to play with. The game dynamically generates a word matching the requested length and create the game state. the front end uses react 
+                  to update the visuals based on the response from the serve as each move is plated. 
+                  in the even that a bad guess is made the hangman is progressed while on a successful guess no changes are made to the hang mane but the guessed letters and 
+                  current word fields are updated. 
+                  Following a game the high score table is displayed showing those who have completed games with the same length of word and won. If the player won then their 
+                  name is added to the table. 
+                </li>
+              </ul>
+            </p>       
             <ul class="actions special">
             <li><a href="https://github.com/Selendrial/Portfolio/tree/main/projects/Group-1-hangman-main" class="button large">See the Git</a></li>
             </ul>
