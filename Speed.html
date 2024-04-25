@@ -67,24 +67,46 @@
             </div>
           </div>
           <p>
-            This project was completed as a development exercise using web sockets for asynchronous communication.
+            This project was completed as a development exercise using web sockets for asynchronous communication and drag and drop functions for playing cards.
             This project used a Mongo Express React Node (MERN) stack and implemented web sockets for seamless communication between the client and server.
-            The biggest challenge of this program was the implementation of communication between the clients and server through 
-            sockets and dynamically drawing the cards as they are played. 
-            
+            The biggest challenge of this program was the implementation of drag and drop functions while correctly communicating between the clients and server through 
+            sockets and dynamically drawing the cards as they are played.   
           </p>
+
           <p>
             The Speed Card Game focused on allowing connections between multiple and a server to allow for the users to play games of speed.
-            The game is played with a deck of 52 cards, 13 for each of the 4 suits (Hearts, Diamonds, Clubs, Spades).
-            The game is played with 2 to 6 players and the goal is to be the first player to get rid of all the cards in their hand.
-            The game is played by drawing cards from the deck and playing them in a stack face down.
-            The player with the highest card in their hand wins the round and gets to draw 2 cards from the deck.
-            The game is played until one player has won all the cards in the deck.
-
-            Upon winning the users are asked for a player name which is then stored in a MongoDB database.
-            The user is then shown the status of the played game.
+            In this MERN (MongoDB, Express.js, React.js, Node.js) application, two clients are playing a game of Speed online, web sockets 
+            facilitate seamless and asynchronous communication, enabling instant updates and interactions without the need for constant client-side polling.
+            <ul>
+              <li>
+                Setting Up Web Sockets:<br/>
+                For this application the Socket.io library was used to implement web sockets.
+                Node.js with Express.js serves as the backend where the Socket.io library is integrated.
+                Socket.io provides a WebSocket-based handler real-time communication using message key value pairs tor trigger different actions.
+              </li>
+              <li>
+                Connections:<br>
+                When clients (players in the card game) connect to the server, Socket.io establishes WebSocket connections. Each client is then assigned a unique socket
+                 identifier (socket ID) upon connection. This is ID is stored within the game state and used throughout the program to identify the player and thier actions.
+                 As the game progresses, clients can send and receive real-time messages through web sockets.
+                 The server receives WebSocket events for specific actions from clients and then after completing the required actions and verification
+                 broadcasts the resulting gamestate to all connected players.
+                For the card game, when one player makes a move, the server broadcasts the updated game state to both players in real time.
+              </li>
+              <li>
+                Implementing Draggable Item:<br/>
+                The Drag and Dropp library uses event handlers (onDragStart, onDrag, onDragEnd) to handle the drag events for items.
+                When a card is slected from the players hand it infromation is captured and sent to the server using the socket communication.
+                if the play is valid the server will process the play, update the hand, and draw replacement cards. The updated game state is then 
+                broadcast to the players.
+              </li>
+              <li>
+                Cards:<br/>
+                The implementation of the cards are based on a suit and value pair that are parsed to select the correct image dynamically as well as allow for 
+                serverside game logic to be performed for the card object being played.
+              </li>
+            </ul>
           </p>
-
           <p>          
             <ul class="actions special">
             <li><a href="https://github.com/Selendrial/Portfolio/tree/main/projects/Speed-main" class="button large">See the Git</a></li>
