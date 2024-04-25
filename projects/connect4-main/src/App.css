@@ -1,0 +1,93 @@
+h1 {
+    text-align: center;
+    color: blue;
+  }
+  
+  table {
+    margin: 0 auto;
+    background: blue;
+  }
+  
+  .button {
+    border: 1px solid blue;
+    color: blue;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .tile {
+    height: 80px;
+    width: 80px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .open {
+    background-color: #FFF;
+  }
+  
+  .circle {
+    border-radius: 100px;
+    height: 65px;
+    width: 65px;
+  }
+  
+  .pX {
+    background: red;
+    color: red;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
+  .pO {
+    background: yellow;
+    color: yellow;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+
+  .whiteCircle {
+    background-color: #fff;
+  }
+  
+  .redCircle {
+    background-color: rgb(251, 42, 42);
+    transition: background-color 0.5s;
+  }
+  
+  .yellowCircle {
+    background-color: rgb(243, 239, 20);
+    transition: background-color 0.5s;
+  }

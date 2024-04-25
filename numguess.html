@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Number Guessing Game</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">Portfolio</a>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links"></ul>
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/kyle-westbroek-7a1959114"
+              class="icon brands fa-linkedin"
+              ><span class="label">Linkedin</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/Selendrial"
+              class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Post -->
+        <section class="post">
+          <header class="major">
+            <h1>Number Guessing Game</h1>
+          </header>
+          <div class="image fit" style="text-align: center;">
+            <div id="main-media" style="display: block; margin: auto; max-width: 100%; width: 100%; height: AUTOpx; overflow: hidden;">
+              <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="video/numGuess.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="thumbnails" style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+              <img src="images/numguess1.JPG" alt="Number Guessing Game Video" style="width: 100px; cursor: pointer;" onclick="changeMedia('video/numGuess.mp4', 'video')">
+              <img src="images/numguess2.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+              <img src="images/numguess3.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+              <img src="images/numguess4.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+            </div>
+          </div>
+          <p>
+            This project was was completed with the goal of implementing a MongoDB and routes for communicaiton with the server. 
+            This applicaiton takes in a users name then creates a game record within the database and populates it with a randome number.
+            Then the user geusses a number from 1-100. The guess is relayed to the database where it is checked. The user is informed if they are too high or
+             too low. If the user is correct the game ends and the highscore table can be viewed.           
+          </p>
+          <p>
+            The Highscore table is filtered to only the top ten players with the shortest guesses, and have won the game. 
+          </p>
+
+          <p>          
+            <ul class="actions special">
+            <li><a href="https://github.com/Selendrial/Portfolio/tree/main/projects/NumGuess-main" class="button large">See the Git</a></li>
+            </ul>
+        </p>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section class="split contact">
+          <section>
+            <h3>Phone</h3>
+            <p><a href="#">(801)-547-7223</a></p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">Selemdrial@gmail.com</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kyle-westbroek-7a1959114"
+                  class="icon brands fa-linkedin"
+                  ><span class="label">Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Selendrial"
+                  class="icon brands fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+
+<script>
+  function changeMedia(src, type) {
+    const mainMedia = document.getElementById('main-media');
+    if (type === 'video') {
+      mainMedia.innerHTML = `<video controls style="display: block; margin: auto; max-width: 100%; width: 100%;"><source src="${src}" type="video/mp4"></video>`;
+    } else {
+      mainMedia.innerHTML = `<img src="${src}" style="width: 50%; height: 20%; object-fit: cover;">`;
+    }
+  }
+  </script>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Banking Applicaiton</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">Portfolio</a>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links"></ul>
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/kyle-westbroek-7a1959114"
+              class="icon brands fa-linkedin"
+              ><span class="label">Linkedin</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/Selendrial"
+              class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Post -->
+        <section class="post">
+          <header class="major">
+            <h1>Banking Applicaiton</h1>
+          </header>
+          <div class="image fit" style="text-align: center;">
+            <div id="main-media" style="display: block; margin: auto; max-width: 100%; width: 100%; height: AUTOpx; overflow: hidden;">
+              <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="video/bank.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="thumbnails" style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+              <img src="images/bank1.JPG" alt="Bank Video" style="width: 100px; cursor: pointer;" onclick="changeMedia('video/bank.mp4', 'video')">
+              <img src="images/bank2.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+              <img src="images/bank3.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+              <img src="images/bank4.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+              <img src="images/bank5.JPG" alt="" style="width: 100px; cursor: pointer;" onclick="changeMedia(this.src, 'image')">
+            </div>
+          </div>
+          <p>
+            The goal of this project was to implament sessions for secure login applications. This program uses Node and Express to communicate
+            with the MongoDB. Sessions are created and passed to the server, and saved to the database. Once the user logs in they are able to perform 
+            actions on thier account. Each action that is performed is recorded in a legger that the user can view at anytime. 
+            
+            This application include secure passwords practices by implementing sha-256 hashing and salting values that are saved to the database
+            rather than raw password data. 
+          </p>
+
+
+          <p>          
+            <ul class="actions special">
+            <li><a href="https://github.com/Selendrial/Portfolio/tree/main/projects/Speed-main" class="button large">See the Git</a></li>
+            </ul>
+        </p>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section class="split contact">
+          <section>
+            <h3>Phone</h3>
+            <p><a href="#">(801)-547-7223</a></p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">Selemdrial@gmail.com</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kyle-westbroek-7a1959114"
+                  class="icon brands fa-linkedin"
+                  ><span class="label">Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Selendrial"
+                  class="icon brands fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+
+<script>
+  function changeMedia(src, type) {
+    const mainMedia = document.getElementById('main-media');
+    if (type === 'video') {
+      mainMedia.innerHTML = `<video controls style="display: block; margin: auto; max-width: 100%; width: 100%;"><source src="${src}" type="video/mp4"></video>`;
+    } else {
+      mainMedia.innerHTML = `<img src="${src}" style="display: block; margin: auto; max-width: 100%; width: 100%;">`;
+    }
+  }
+  </script>
